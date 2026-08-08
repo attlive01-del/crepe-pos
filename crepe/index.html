@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <!-- PWA & Mobile Web App Meta Tags -->
+    <title>Crepeye POS - نظام كريباي للكاشير والمبيعات</title>
+    <meta name="description" content="نظام كاشير ومبيعات وتكاليف محلي 100% يعمل بدون إنترنت على الهاتف" />
+    <meta name="theme-color" content="#0f172a" />
+    
+    <!-- iOS / Safari Standalone Home Screen Settings -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Crepeye POS" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Manifest & Icons -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=300&q=80" />
+    <link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=300&q=80" />
+  </head>
+  <body class="bg-[#020617] text-slate-100 antialiased select-none">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(
+            (reg) => console.log('ServiceWorker registered:', reg.scope),
+            (err) => console.log('ServiceWorker registration failed:', err)
+          );
+        });
+      }
+    </script>
+  </body>
+</html>
+

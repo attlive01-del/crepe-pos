@@ -1,0 +1,6 @@
+{
+  "name": "Crepeye POS - كريباي لنظام إدارة المبيعات والمطاعم",
+  "description": "نظام نقطة بيع متكامل (POS) لإدارة مطاعم وبسطات الكريب والوافل والمشروبات مع إدارة المبيعات، المصاريف، التقارير والتحليل المالي",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
